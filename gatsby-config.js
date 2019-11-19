@@ -5,8 +5,22 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: 'TS 2020',
+    menuLinks: [
+      {
+        name: 'home',
+        link: '/'
+      },
+      {
+        name: 'about',
+        link: '/about'
+      }
+    ]
+  },
   plugins: [
-    'gatsby-plugin-netlify-cms',
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-sass",
       options: {
@@ -16,12 +30,6 @@ module.exports = {
           },
         },
       },
-    },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    }
   ]
 }
