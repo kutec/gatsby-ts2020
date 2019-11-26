@@ -9,11 +9,11 @@ module.exports = {
     title: 'TS 2020',
     menuLinks: [
       {
-        name: 'home',
+        name: 'Home',
         link: '/'
       },
       {
-        name: 'about',
+        name: 'About',
         link: '/about'
       }
     ]
