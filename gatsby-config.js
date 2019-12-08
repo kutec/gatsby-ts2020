@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'TS 2020',
+    title: 'TeckStack',
     menuLinks: [
       {
         name: 'Home',
