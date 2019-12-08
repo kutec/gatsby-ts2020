@@ -10,7 +10,7 @@ const Header = ({ siteTitle, menuLinks }) => (
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<Link className="navbar-brand" to="/">
-					<img src="https://secure.gravatar.com/avatar/5763d82a3129a853b48b2fd7a5c21abd?s=32&r=g" height="32px" width="32px" />
+					<img src="https://secure.gravatar.com/avatar/5763d82a3129a853b48b2fd7a5c21abd?s=32&r=g" height="32px" width="32px" alt={siteTitle} />
 					<span className="align-middle">{siteTitle}</span>
       			</Link>
 
