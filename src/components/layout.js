@@ -1,7 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import Header from './header'
-import { StaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 
 export default ({ pageMeta, children }) => (
   <>
@@ -29,7 +29,7 @@ export default ({ pageMeta, children }) => (
 
             <body className={pageMeta.customCssClass ? pageMeta.customCssClass : ''} />
 
-            <title>{`TS 2020 | ${pageMeta.title}`}</title>
+            <title>{`${data.site.siteMetadata.title} | ${pageMeta.title}`}</title>
 
             {/* The charset, viewport and author meta tags will always have the same value, so we hard code them! */}
             <meta charset="UTF-8" />
@@ -45,8 +45,16 @@ export default ({ pageMeta, children }) => (
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
           </Helmet>
           <Header menuLinks={data.site.siteMetadata.menuLinks} siteTitle={data.site.siteMetadata.title} />
-          {children}
-          <footer>{`${new Date().getFullYear()} No Rights Whatsoever Reserved`}</footer>
+          <main>
+            <section className="container">
+              {children}
+            </section>
+          </main>
+          <footer>
+            <div className="container">
+              {`${new Date().getFullYear()} No Rights Whatsoever Reserved`}
+            </div>
+          </footer>
 
           <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
           <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -55,4 +63,3 @@ export default ({ pageMeta, children }) => (
     />
   </>
 )
-

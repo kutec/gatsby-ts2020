@@ -10,8 +10,8 @@ const Header = ({ siteTitle, menuLinks }) => (
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<Link className="navbar-brand" to="/">
-					<img src="https://secure.gravatar.com/avatar/5763d82a3129a853b48b2fd7a5c21abd?s=32&r=g" /> 
-					TS 2020
+					<img src="https://secure.gravatar.com/avatar/5763d82a3129a853b48b2fd7a5c21abd?s=32&r=g" height="32px" width="32px" alt={siteTitle} />
+					<span className="align-middle">{siteTitle}</span>
       			</Link>
 
 				<div className="collapse navbar-collapse" id="navbarTogglerDemo03">
@@ -24,31 +24,14 @@ const Header = ({ siteTitle, menuLinks }) => (
 							</li>
 						))}
 					</ul>
+					<form className="form-inline my-2 my-lg-0">
+						<input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+						<button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form>
 				</div>
 
 			</div>
 		</nav>
-
-
-
-		{/* <div>
-			<div>
-				<h1>
-					<Link to="/">{siteTitle}</Link>
-				</h1>
-				<div>
-					<nav>
-						<ul>
-							{menuLinks.map(link => (
-								<li key={link.name}>
-									<Link to={link.link}>{link.name}</Link>
-								</li>
-							))}
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div> */}
 	</header>
 )
 

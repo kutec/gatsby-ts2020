@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'TS 2020',
+    title: 'TeckStack',
     menuLinks: [
       {
         name: 'Home',
@@ -30,6 +30,13 @@ module.exports = {
           },
         },
       },
-    }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/content/`,
+      },
+    },
   ]
 }
