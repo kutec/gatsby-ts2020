@@ -2,6 +2,9 @@
 
 ### change logs
 
+#### Jan 26, 2020
+- Registered new MD file created through Netlify admin as a blog entry under `content/blog` directory
+
 #### Dec 8, 2019
 - Corrected layout for main-content and footer area
 - Set proper vertical align for Logo text
